@@ -318,9 +318,10 @@ public class Smsc {
 	}
 
 	public synchronized static String getMessageID() {
-		long msgID = message_id++;
-		String msgIDstr = SMPPSim.getMid_prefix()+Long.toString(msgID);
-		return msgIDstr;
+		//long msgID = message_id++;
+		//String msgIDstr = SMPPSim.getMid_prefix()+Long.toString(msgID);
+		//return msgIDstr;
+		return UUID.randomUUID().toString();
 	}
 
 	public static int getNextSequence_No() {
